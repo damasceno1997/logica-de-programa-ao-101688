@@ -1,34 +1,30 @@
-import os
+import os 
 
-#limpa o terminal
+os.system (" cls || clear")
 
-os.system("cls || clear")
-
-#repetidor
 
 while True:
 
+  n1 = (float(input("Digite a primeira nota: ")))
+  n2 = (float(input("Digite a segunda nota: ")))
+  n3 = (float(input("Digite a terceira nota: ")))
 
-#entrada de dados
 
- a = float(input("digite o primeiro numero:"))
- b = float(input("digite o segundo numero:"))
+  if n1 >= 0 and n1 <= 10 and n2 >= 0 and n2 <= 10 and n3 >= 0 and n3 <= 10:
+    media = (n1 + n2 + n3) / 3
+    print(f"\n A média do aluno é: {media:.2f}")
+    break
+    
+else:
+    print("\nNota inválida! As notas devem ser entre 0 e 10.")
 
-#calcule
+  
+if media >= 7:
+    print("\nAluno aprovado!")
+elif media >= 5 and media < 7:
+    print("\nAluno em recuperação!")
+else:
+    print("\nAluno reprovado!")
+    
+print("\nPrograma encerrado.")
 
- soma = a + b
- subtracao = a - b
- multiplicacao = a * b
- divisao = a / b
-
-#resultado
-
- print ("\n---RESULTADO---:")
- print (f"soma: {soma:.2f}")
- print (f"subtração: {subtracao:.2f}")
- print (f"multiplicação: {multiplicacao:.2f}")
- print (f"divisão: {divisao:.2f}")
-
- print("\n-------programa finalizado.-------")
- print("\n" * 2)
- 

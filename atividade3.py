@@ -1,22 +1,22 @@
-import os
+import os 
 
 os.system ("cls || clear")
 
-nota1 = float(input ("digite sua primeira nota:"))
-nota2 = float(input ("digite sua segunda nota:"))
-nota3 = float(input ("digite sua terceira nota:"))
+tentativas = 0
 
+while tentativas < 3:
+    
 
-media = (nota1 + nota2 + nota3) /3
-
-print (f"A media das notas é: {media:.2f}")
-
-if media >= 7:
-    resultado = "aprovado"
-
-else:
-    resultado = "reprovado"
-
-print ("exibindo dados")    
-print (f"media:{media}")
-print (f"resultado:{resultado}")
+    login = input("digite seu login: ")
+    senha = int(input("digite sua senha: "))
+    
+    if login == "danilodamasceno2007@gmail.com" and senha == 12345678:
+        print("\nLogin bem-sucedido!")
+        break
+    else:
+        print("\nlogin ou senha incorretos> tente novamente")
+        
+    tentativas += 1 
+    if tentativas == 3:
+        print("\nNúmero máximo de tentativas atingido. Acesso bloqueado.")
+        break

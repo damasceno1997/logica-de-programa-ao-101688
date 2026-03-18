@@ -1,23 +1,28 @@
 import os
 
-os.system("clear")
-print("Bem-vindo ao jogo de adivinhação!")
-print("Tente adivinhar o número que estou pensando entre 1 e 100.")
-import random
-numero_secreto = random.randint(1, 100)
-tentativas = 0
+#limpar o terminal
+os.system ("cls || cler")
+
+
+
+#repetiçao
 while True:
-    palpite = int(input("Digite seu palpite: "))
-    tentativas += 1
-    if palpite < numero_secreto:
-        print("Muito baixo! Tente novamente.")
-    elif palpite > numero_secreto:
-        print("Muito alto! Tente novamente.")
-    else:
-        print(f"Parabéns! Você adivinhou o número em {tentativas} tentativas.")
-        break
     
-
-print("Obrigado por jogar!")
-
-#danterks
+    #entrada de dados
+   nota = float(input("Digite a nota do aluno: "))
+    
+    #verificaçao de nota
+   if nota >= 0 and nota <= 10:
+       #exibir a nota do aluno
+     print(f"\n a nota do aluno é: {nota}")
+     #parar a repetiçao
+     break
+ 
+   # se a nota for invalida vai mostar a mensagem de erro e solicitar a nota novamente
+   else: 
+        print(f"\nNota inválida! A nota deve ser entre 0 e 10.")
+        
+    #finalizar o programa
+print("\nPrograma encerrado.") 
+ 
+ 

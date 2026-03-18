@@ -1,18 +1,28 @@
 import os 
-import time 
 
-os.system ("cls")
+os.system ("cls || clear")
 
 
-soma = 0 
+soma = 0
+contador = 0
 
-quantidade_notas = 5
-
-for i in range(quantidade_notas):
-    nota = int(input("digite uma nota:"))
+while True:
+    nota = float(input("Digite uma nota: "))
+    
     soma += nota
+    contador += 1
     
+    resposta = input("Deseja inserir outra nota? (s/n): ").lower()
     
-media = soma / quantidade_notas
+    if resposta == "n":
+        break
+    elif resposta != "s":
+        print("Resposta inválida! Encerrando...")
+        break
 
-print (f"media: {media}")    
+# cálculo da média
+if contador > 0:
+    media = soma / contador
+    print(f"\nMédia das notas: {media:.2f}")
+else:
+    print("Nenhuma nota foi informada.")

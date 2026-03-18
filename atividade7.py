@@ -1,25 +1,20 @@
-import os
+soma = 0
+contador = 0
 
-os.system("cls")
+while True:
+    numero = int(input("Digite um número positivo (negativo para sair): "))
+    
+    if numero < 0:
+        break  # encerra o loop
+    
+    soma += numero
+    contador += 1
 
-# Solicita as 3 notas
-nota1 = float(input("Digite a primeira nota: "))
-nota2 = float(input("Digite a segunda nota: "))
-nota3 = float(input("Digite a terceira nota: "))
-
-# Calcula a média
-media = (nota1 + nota2 + nota3) / 3
-
-# Mostra a média
-print(f"Média: {media:.2f}")
-
-# Verifica a situação do aluno
-if media >= 7:
-    print("Aprovado")
-elif media < 4:
-    print("Reprovado")
+# cálculo da média
+if contador > 0:
+    media = soma / contador
+    print(f"\nMédia dos valores: {media:.2f}")
 else:
-    print("Recuperação")
+    print("Nenhum valor positivo foi informado.")
     
-    
-print("\n fim de programa")
+print
