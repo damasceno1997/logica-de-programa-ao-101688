@@ -1,22 +1,40 @@
-import os 
+import os
 
 os.system ("cls || clear")
 
-tentativas = 0
+quantidade_pares = 0
+quantidade_impares = 0
+soma_pares = 0
+soma_total = 0
+quantidade_total = 0   
 
-while tentativas < 3:
-    
-
-    login = input("digite seu login: ")
-    senha = int(input("digite sua senha: "))
-    
-    if login == "danilodamasceno2007@gmail.com" and senha == 12345678:
-        print("\nLogin bem-sucedido!")
+print ("Bem vindo ao programa de calculo de numeros pares e impares")
+while True:
+    numero = int(input("Digite um número inteiro positivo (ou zero para finalizar): "))
+    if numero == 0:
         break
+    soma_total += numero
+    quantidade_total += 1
+    if numero % 2 == 0:
+        quantidade_pares += 1
+        soma_pares += numero
     else:
-        print("\nlogin ou senha incorretos> tente novamente")
+        quantidade_impares += 1
         
-    tentativas += 1 
-    if tentativas == 3:
-        print("\nNúmero máximo de tentativas atingido. Acesso bloqueado.")
-        break
+if quantidade_pares > 0:
+    media_pares = soma_pares / quantidade_pares
+else:
+    media_pares = 0
+    
+if quantidade_total > 0:
+    media_geral = soma_total / quantidade_total
+else:
+    media_geral = 0
+    
+print(f"Quantidade de números pares: {quantidade_pares}")
+print(f"Quantidade de números ímpares: {quantidade_impares}")
+print(f"Média dos valores pares: {media_pares:.2f}")
+print(f"Média geral dos números lidos: {media_geral:.2f}")
+
+
+print ("\nPrograma finalizado")
