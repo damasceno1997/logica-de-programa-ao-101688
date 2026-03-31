@@ -1,41 +1,38 @@
 import os
-from unittest import case 
 
-os.system("cls || clear")
+os.system ("cls || clear")
 
- #menu
- 
-print("Bem-vindo ao cardápio do restaurante!")
- 
-print ("""
- ==========MENU==========
- 
-    CODIGO |     PRATO      |   PREÇO
-     1     | PICANHA        |  R$ 25,00
-     2     | LASANHA        |  R$ 20,00
-     3     | STROGONOFF     |  R$ 18,00
-     4     | BIFE ACEBOLADO | R$ 15,00
-     5     | PÃO COM OVO    | R$ 5,00
-  
-     """)
- 
-codigo = int(input("Digite o código do prato que deseja pedir: "))
+while True:
+    print("Bem-vindo ao cardápio do restaurante!")
 
-match codigo:
+    print("\n 1 - picanha - R$ 25,00")
+    print("\n 2 - lasanha - R$ 20,00")
+    print("\n 3 - strogonoff - R$ 18,00")
+    print("\n 4 - bife acelebolado - R$ 15,00")
+    print("\n 5 - pao com ovo - R$ 5,00")
+    
+    escolha = input("\nDigite o número do prato que deseja pedir: ")
+    if escolha == "1":
+        print("\nVocê escolheu picanha. O valor é R$ 25,00.")
+    elif escolha == "2":
+        print("\nVocê escolheu lasanha. O valor é R$ 20,00.")
+    elif escolha == "3":
+        print("\nVocê escolheu strogonoff. O valor é R$ 18,00.")
+    elif escolha == "4":
+        print("\nVocê escolheu bife acelebolado. O valor é R$ 15,00.")
+    elif escolha == "5":
+        print("\nVocê escolheu pão com ovo. O valor é R$ 5,00.")
+    else:
+        print("\nOpção inválida. Por favor, escolha um número de 1 a 5.")
+        
+    continuar = input("\nDeseja fazer outro pedido? (sim/não): ")
+    if continuar.lower() != "sim":
+        print("\nObrigado por visitar nosso restaurante! Volte sempre!")
+        break
+    
+print("\n fim de programa")
+    
+    
 
-    case 1:
-        print("Você pediu PICANHA  VALOR R$ 25,00")
-    case 2:
-        print("Você pediu LASANHA  VALOR R$ 20,00")
-    case 3:
-        print("Você pediu STROGONOFF  VALOR R$ 18,00")
-    case 4:
-        print("Você pediu BIFE ACEBOLADO  VALOR R$ 15,00")
-    case 5:
-        print("Você pediu PÃO COM OVO  VALOR R$ 5,00")
-    case _:
-        print("Prato não encontrado")
-
-
-
-print ("\nFim do programa")
+        
+        
